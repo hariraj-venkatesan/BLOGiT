@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get 'static_pages/home'
+  get 'signup' => 'users#new'
 
   resources :posts
   resources :users
