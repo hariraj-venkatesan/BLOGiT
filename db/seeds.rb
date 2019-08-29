@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.destroy_all
 User.create!(name: "Example User",
 			email: "example@email.com",
 			password: "password",
@@ -18,4 +19,9 @@ User.create!(name: "Example User",
 				email: email,
 				password: password,
 				password_confirmation: password)
+	users = User.order(:created_at).take(6)
+	50.times do
+		content = Faker::Lorem.sentence(5)
+		users.each { |user| user.posts.create!(content: content) }
+	end
 end

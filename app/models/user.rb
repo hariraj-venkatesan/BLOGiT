@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
+	has_many :posts, dependent: :destroy
+
 	attr_accessor :remember_token
 	before_save { self.email = email.downcase }
-    has_many :posts
+    
     validates :name, presence: true, length: { maximum: 50 }
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
@@ -29,5 +31,9 @@ class User < ActiveRecord::Base
 
     def forget
     	update_attribute(:remember_digest, nil)
+    end
+
+    def feed
+    	Post.where("user_id = ?", id)
     end
 end
