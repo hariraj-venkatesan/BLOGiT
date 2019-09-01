@@ -1,14 +1,44 @@
-<p id="notice"><%= notice %></p>
+<aside>
+	<h2><%= @user.name %></h2>
+	<p>
+	  <%= @post.content %>
+	</p>
+</aside>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<div id ="comments">
+	<strong>Comments(<%= @post.comments.count %>)</strong>
+	
+	<% if @post.comments.nil? %>
+		<h2> Be the first to comment </h2>
+	<% else %>
+	<ul class="commentlist">
+		<% @post.comments.each do |comment| %>
+			<li class="comment">
+				<b>
+					<% if comment.user_id.nil? %>
+						Anonymous
+					<% else %>
+						<%= comment.user.name %>
+					<% end %>
+				</b>
+				<%= comment.body %>
+			</li>
+		<% end %>
+	</ul>
+	<% end %>
 
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= form_for :comment, url: post_comments_path(@post) do |f| %>
+	<p>
+		<%= f.label :body, "Add a comment" %><br>
+		<%= f.text_area :body %>
+		<p>
+			<%= f.label :comment_anonymously, class: "checkbox inline"  do %>
+				<span><%= f.check_box :comment_anonymously %> Comment Anonymously</span>
+			<% end %>
+		</p>
+	</p>
+	<%= f.submit "Add" %>
+<% end %>
+

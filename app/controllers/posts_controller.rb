@@ -3,8 +3,6 @@ class PostsController < ApplicationController
   before_action :correct_user, only: :destroy
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-  # POST /posts
-  # POST /posts.json
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
@@ -43,9 +41,9 @@ class PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
+      @user = User.find(@post.user_id)
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:content)
     end
