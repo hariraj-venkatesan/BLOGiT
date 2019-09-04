@@ -33,6 +33,8 @@ gem 'faker', '1.4.2'
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
+gem 'web-console', '~> 2.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -43,7 +45,6 @@ group :development, :test do
   gem 'sqlite3', '1.3.9'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '3.4.0'
-  gem 'web-console', '~> 2.0'
   gem 'spring', '1.1.3'
 end
 
