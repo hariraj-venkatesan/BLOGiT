@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'shared_posts/index'
+
+  get 'shared_posts/create'
+
+  get 'shared_posts/destroy'
+
   get 'sessions/new'
 
   get 'users/new'
@@ -15,6 +22,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  resources :shared_posts, only: [:new, :create, :destroy]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

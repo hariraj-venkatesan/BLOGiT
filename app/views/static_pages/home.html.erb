@@ -1,4 +1,3 @@
-<% provide(:title, "Home") %>
 <% if logged_in? %>
 	<div class="row">
 		<aside class="col-md-4">
@@ -20,5 +19,8 @@
 		<p>Put your thoughts to words...</p>
 		<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 	</div>
-	<%= link_to image_tag("rails.png", alt:"Rails logo"), 'http://rubyonrails.org/' %>
+	<div class="center">
+		Built with <%= link_to image_tag("rails.png", alt:"Rails logo"), 'http://rubyonrails.org/' %>	
+	</div>
+	
 <% end %>

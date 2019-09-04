@@ -27,7 +27,6 @@ module SessionsHelper
 	end
 
 	def logged_in?
-		# byebug
 		!current_user.nil?
 	end
 

@@ -1,0 +1,8 @@
+<p>
+	<%= @post.content %>
+</p>
+<%= form_for @shared_post do |f| %>
+<%= hidden_field_tag :post_id, @post.id %>
+<%= f.collection_select :id, User.all, :id, :name, { :include_hidden => false }, {:multiple => true} %>
+<%= f.submit "Share", class: "btn btn-primary" %>
+<% end %>

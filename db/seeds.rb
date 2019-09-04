@@ -8,6 +8,7 @@
 User.destroy_all
 Post.destroy_all
 Comment.destroy_all
+SharedPost.destroy_all
 
 10.times do |n|
 	name = Faker::Name.name

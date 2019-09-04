@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   def new
     if logged_in?
       redirect_back_or current_user
+      # redirect_back_or 'static_pages/home'
     end
   end
 
@@ -10,7 +11,8 @@ class SessionsController < ApplicationController
   	if user && user.authenticate(params[:session][:password])
   		log_in user
   		params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-  		redirect_back_or user
+  		# redirect_back_or user
+      redirect_back_or root_url
   	else
   		flash.now[:danger] = "Invalid credentials"
   		render 'new'

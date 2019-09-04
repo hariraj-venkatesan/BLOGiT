@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :posts, dependent: :destroy
     has_many :comments, dependent: :destroy
+    has_many :shared_posts, dependent: :destroy
 
 	attr_accessor :remember_token
 	before_save { self.email = email.downcase }
@@ -35,6 +36,8 @@ class User < ActiveRecord::Base
     end
 
     def feed
-    	Post.where("user_id = ?", id)
+        shared_post_ids = SharedPost.where(reader_id:id).map { |s| s.post_id }
+        shared_post_ids.concat Post.where("user_id = ?", id).map{ |p| p.id }
+    	Post.where('id IN (?)', shared_post_ids)
     end
 end
