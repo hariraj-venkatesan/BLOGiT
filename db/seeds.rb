@@ -20,13 +20,13 @@ Post.destroy_all
 	1.times do
 		title = Faker::Lorem.sentence(5)
 		content = Faker::Lorem.sentence(25)
-		users.posts.create!(content: content, public_post: true)
+		users.posts.create!(title: title, content: content, public_post: true)
 		# users.each { |user| user.posts.create!(content: content, public_post: true) }
 	end
 	2.times do
 		title = Faker::Lorem.sentence(5)
 		content = Faker::Lorem.sentence(25)
-		users.posts.create!(content: content, public_post: false)
+		users.posts.create!(title: title, content: content, public_post: false)
 		# users.each { |user| user.posts.create!(content: content, public_post: false) }
 	end
 end

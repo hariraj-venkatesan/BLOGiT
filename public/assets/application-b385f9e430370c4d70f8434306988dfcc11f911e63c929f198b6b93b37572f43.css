@@ -8069,67 +8069,59 @@ h1 {
 
 /* line 39, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 h2 {
-  font-size: 1.2em;
+  font-size: 2.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777777;
 }
 
-/* line 48, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 47, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
 
 /*header*/
-/* line 55, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 54, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: black;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
 
-/* line 66, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 64, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 #logo:hover {
   color: white;
   text-decoration: none;
 }
 
 /*footer*/
-/* line 73, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 71, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777777;
 }
-/* line 78, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
-footer a {
-  color: #555555;
-}
-/* line 80, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 77, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 footer a:hover {
-  color: #222222;
+  background-color: inherit;
 }
-/* line 84, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
-footer ul {
-  float: right;
-  list-style: none;
-}
-/* line 87, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
-footer ul li {
+/* line 81, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+footer #rails {
   float: left;
-  margin-left: 15px;
+}
+/* line 85, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+footer #github {
+  float: right;
 }
 
-/* line 94, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 90, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -8141,27 +8133,27 @@ footer ul li {
 }
 
 /*sidebar*/
-/* line 105, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 101, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 aside section.user_info {
   margin-top: 20px;
 }
-/* line 108, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 104, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 aside section {
   padding: 10px 0;
   margin-top: 20px;
 }
-/* line 111, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 107, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 aside section:first-child {
   border: 0;
   padding-top: 0;
 }
-/* line 115, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 111, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 aside section span {
   display: block;
   margin-bottom: 3px;
   line-height: 1;
 }
-/* line 120, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 116, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 aside section h1 {
   font-size: 1.4em;
   text-align: left;
@@ -8171,59 +8163,58 @@ aside section h1 {
 }
 
 /*forms*/
-/* line 132, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 128, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  /*width: 100%;*/
   margin-bottom: 15px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 139, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 134, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 input {
   height: auto !important;
 }
 
-/* line 143, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 138, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: red;
 }
-/* line 145, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 140, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   color: red;
   margin: 0 0 30px 0;
 }
 
-/* line 153, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 148, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .field_with_errors .form-control {
   color: #a94442;
 }
 
-/* line 158, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 153, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 161, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 156, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .checkbox span {
   margin-left: 20px;
   font-weight: normal;
 }
 
-/* line 167, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 162, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 #session_remember_me {
   width: auto;
   margin-left: 0;
 }
 
-/* line 172, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 167, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 175, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 170, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
@@ -8231,60 +8222,60 @@ input {
 }
 
 /*posts*/
-/* line 184, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 179, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .posts {
   list-style: none;
   padding: 0;
 }
-/* line 187, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 182, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .posts li {
   padding: 10px 0;
   border-top: 1px solid #e8e8e8;
 }
-/* line 191, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 186, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .posts .user {
   margin-top: 5em;
   padding-top: 0;
 }
-/* line 195, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 190, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .posts .content {
   display: block;
   margin-left: 60px;
 }
-/* line 198, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 193, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .posts .content img {
   display: block;
   padding: 5px 0;
 }
-/* line 203, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 198, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .posts .timestamp {
   color: #777777;
   display: block;
   margin-left: 60px;
 }
 
-/* line 211, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 206, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 aside textarea {
   height: 100px;
   margin-bottom: 5px;
 }
 
-/* line 217, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 212, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 #comments {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   max-width: 900px;
 }
-/* line 222, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 217, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 #comments ul {
   list-style: none;
 }
 
-/* line 227, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 222, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .commentlist {
   padding: 0;
 }
-/* line 230, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
+/* line 225, /Users/harirajvenkatesan/Desktop/git_play/rails_projects/rails4/blog/app/assets/stylesheets/custom.css.scss */
 .commentlist .comment {
   position: relative;
   list-style: none;
