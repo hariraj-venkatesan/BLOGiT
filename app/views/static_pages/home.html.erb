@@ -1,12 +1,11 @@
 <% if logged_in? %>
+	<%= provide(:title, "Home") %>
 	<div class="row">
 		<aside class="col-md-4">
 			<section class="user-info">
 				<%= render 'shared/user_info' %>
 			</section>
-			<section class="post_form">
-				<%= render "shared/post_form" %>
-			</section>
+			<%= link_to "Create Post", new_post_path, class: "btn btn-primary" %>
 		</aside>
 		<div class="col-md-8">
 			<h3>Posts feed</h3>
@@ -14,13 +13,13 @@
 		</div>
 	</div>
 <% else %>
+	<%= provide(:title, "BLOGiT - the ultimate blogger") %>
 	<div class="center jumbotron">
-		<h1>Welcome to bLogs!</h1>
-		<p>Put your thoughts to words...</p>
+		<h2>Welcome to BLOGiT - the ultimate blogger</h2>
+		<p>Put your thoughts to words...</p><br>
 		<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 	</div>
 	<div class="center">
-		Built with <%= link_to image_tag("rails.png", alt:"Rails logo"), 'http://rubyonrails.org/' %>	
+		<strong><i>Powered by</i></strong> <%= link_to image_tag("rails.png", alt:"Rails logo", width: "68", height: "87"), 'https://rubyonrails.org/' %>	
 	</div>
-	
 <% end %>

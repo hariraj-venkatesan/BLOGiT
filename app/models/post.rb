@@ -4,8 +4,8 @@ class Post < ActiveRecord::Base
     has_many :reader, through: :shared_posts
     
     default_scope -> { order(created_at: :desc) }
-    validates :user_id, presence: true
-    validates :content, presence: true, length: { maximum: 140 }
+    validates :title, presence: true
+    validates :content, presence: true
 
     def share(reader)
     	shared_posts.create(author: current_user, post:post, reader: reader)

@@ -24,5 +24,8 @@ module Blog
     config.active_record.raise_in_transactional_callbacks = true
 
     config.web_console.development_only = false
+
+    config.action_mailer.default_url_options = { host: 'localhost:3000' }
+    config.action_mailer.preview_path = "#{Rails.root}/lib/mailer_previews"
   end
 end

@@ -1,26 +1,24 @@
 <%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= provide(:title, "New story") %>
+  <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+  	<%= f.label :title, "About" %>
+  	<%= f.text_field :title, placeholder: "A title for the story" %>
   </div>
+
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.label :content %>
+    <%= f.text_area :content, placeholder: "The story goes here" %>
   </div>
+  
   <div class="field">
+  	<%= f.label :share_to %>
     <%= f.collection_select :user_id, User.all, :id, :name, {}, {:multiple => true } %>
+  </div>
+  <div class="field">
+  	<span><%= f.check_box :public_post, { checked: true }, true, false %> Public post</span>
+  	<span><%= f.check_box :mute_notif, { checked: false }, true, false %> Mute notifications for this post</span>
   </div>
   <div class="actions">
     <%= f.submit %>
