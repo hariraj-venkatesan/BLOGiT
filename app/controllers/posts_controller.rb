@@ -3,6 +3,10 @@ class PostsController < ApplicationController
   before_action :correct_user, only: [:index, :destroy]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @post = Post.new
+  end
+
   def create
     @post = current_user.posts.build(post_params)
     @post.public_post = params[:post][:public_post].to_i
@@ -30,7 +34,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:content, :public_post)
+      params.require(:post).permit(:title, :content, :public_post, :mute_notif)
     end
 
     def correct_user

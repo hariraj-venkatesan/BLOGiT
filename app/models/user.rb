@@ -40,4 +40,8 @@ class User < ActiveRecord::Base
         shared_post_ids.concat Post.where("user_id = ?", id).map{ |p| p.id }
     	Post.where('id IN (?)', shared_post_ids)
     end
+
+    def self.all_except(user)
+      where.not(id: user)
+    end
 end

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content= 'text/html; charset=utf-8' http-equiv="Content-Type" />
+</head>
+<body>
+	<h1>Hi <%= @author.name %>!</h1>
+	<p>Your post <%= @post.title %> is becoming famous, a new comment has come up.</p>
+	<p>Click <%= link_to "here", post_path(@post.id) %> to take a look.</p>
+</body>
+</html>
