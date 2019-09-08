@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.1'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+gem 'sqlite3', '1.3.9'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -35,8 +35,8 @@ gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'web-console', '~> 2.0'
 
-gem 'devise', '~>3.1.0'
-gem 'warden', '~>1.2.3'
+# gem 'devise', '~>3.1.0'
+# gem 'warden', '~>1.2.3'
 gem 'figaro'
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -45,7 +45,7 @@ gem 'figaro'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'sqlite3', '1.3.9'
+  # gem 'sqlite3', '1.3.9'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '3.4.0'
   gem 'spring', '1.1.3'

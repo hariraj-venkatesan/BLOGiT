@@ -26,6 +26,7 @@ module Blog
     config.web_console.development_only = false
 
     config.action_mailer.default_url_options = { host: 'example.com' }
+    config.action_mailer.default_url_options = { host: 'blogit-ultimate.herokuapp.com' }
     # config.action_mailer.preview_path = "#{Rails.root}/lib/mailer_previews"
   end
 end

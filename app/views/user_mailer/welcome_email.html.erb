@@ -4,13 +4,11 @@
 	<meta content= 'text/html; charset=utf-8' http-equiv="Content-Type" />
 </head>
 <body>
-	<h1>Welcome to Blogit, <%= @user.name %></h1>
+	<h1>Welcome to BLOGiT, <%= @user.name %></h1>
 	<p>
-		Thanks for joining Blogit. Be rest assured of a wonderful experience! To confirm your registration, click the URL below:
+		Thanks for joining BLOGiT. Be rest assured of a wonderful experience! To confirm your registration, click the URL below:
 
 		<%= confirm_email_user_url(@user.confirm_token) %>
-
-		<%#<%= link_to "Confirm", confirm_email_url(@user.confirm_token, host: 'http://localhost:3000') %>
 	</p>
 </body>
 </html>

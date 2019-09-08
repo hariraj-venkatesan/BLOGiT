@@ -1,8 +1,6 @@
-Welcome to Blogit, <%= @user.name %>
+Welcome to BLOGiT, <%= @user.name %>
 ========================================
 
-Thanks for joining Blogit. Be rest assured of a wonderful experience! To confirm your registration, click the URL below:
+Thanks for joining BLOGiT. Be rest assured of a wonderful experience! To confirm your registration, click the URL below:
 
 <%= confirm_email_user_url(@user.confirm_token) %>
-
-<%#<%= link_to "Confirm", confirm_email_url(@user.confirm_token, host: 'http://localhost:3000') %>
