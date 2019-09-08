@@ -1,8 +1,25 @@
-<p>
-	<%= @post.content %>
-</p>
-<%= form_for @shared_post do |f| %>
-	<%= hidden_field_tag :post_id, @post.id %>
-	<%= f.collection_select :id, User.all_except(current_user), :id, :name, { :include_hidden => false }, {:multiple => true} %>
-	<%= f.submit "Share", class: "btn btn-primary" %>
-<% end %>
+<div class="row">
+	<div class="col-md-12 center">
+
+		<div class="form-group">
+			<h2><%= @post.title %></h2>
+		</div>
+
+		<div class="form-group">
+			<h4><%= @post.content %></h4>
+		</div>
+
+		<div class="form-group col-sm-8 col-md-offset-2">
+			<%= form_for(@shared_post, html: { class: "form-horizontal" }) do |f| %>
+				<%= f.label :share_to, class: "control-label col-sm-2" %>
+				<%= hidden_field_tag :post_id, @post.id %>
+				<div class="col-sm-10">
+					<%= f.collection_select :id, User.all_except(current_user), :id, :name_with_email, { :include_hidden => false }, {:multiple => true, class: "form-control", :size => "7"} %><br>
+				</div>
+				<%= f.submit "Share", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+			
+	</div>
+</div>
+

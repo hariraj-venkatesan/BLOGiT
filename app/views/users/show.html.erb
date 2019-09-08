@@ -13,6 +13,11 @@
 				<%= render @posts %>
 			</ol>
 			<%= will_paginate @posts %>
+		<% elsif current_user? @user %>
+			<h4>Looks like you haven't created any posts yet.</h4>
+			<p>Begin your journey with a new post. It's very simple <%= link_to "Home", root_path %> > Create Post</p>
+		<% else %>
+			<h4>Oops, <b><%=@user.name%></b> hasn't created any posts yet!</h4>
 		<% end %>
 	</div>
 </div>

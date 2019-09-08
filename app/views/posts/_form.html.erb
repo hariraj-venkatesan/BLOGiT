@@ -19,7 +19,7 @@
 	<div class="form-group">
     <%= f.label :share_to, class: "control-label col-sm-2" %>
     <div class="col-sm-10">
-      <%= f.collection_select :user_id, User.all_except(current_user), :id, :name, {}, {:multiple => true, class: "form-control", :size => "7" } %>
+      <%= f.collection_select :user_id, User.all_except(current_user), :id, :name_with_email, {}, {:multiple => true, class: "form-control", :size => "7" } %>
     </div>
   </div>
   

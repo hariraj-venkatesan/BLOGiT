@@ -68,4 +68,8 @@ class User < ActiveRecord::Base
     #         self.confirm_token = SecureRandom.urlsafe_base64.to_s
     #     end
     # end
+
+    def name_with_email
+        "#{name} ( #{email} )"
+    end
 end
