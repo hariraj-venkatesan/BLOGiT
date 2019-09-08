@@ -12,12 +12,18 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
+  # get '/:token/confirm_email/', to: 'users#confirm_email', as: 'confirm_email'
+
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
-  resources :users
+  resources :users do
+    member do
+      get :confirm_email
+    end
+  end
   resources :posts, only: [:create, :destroy]
   resources :posts do
     resources :comments

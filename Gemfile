@@ -35,6 +35,8 @@ gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'web-console', '~> 2.0'
 
+gem 'devise', '~>3.1.0'
+gem 'warden', '~>1.2.3'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

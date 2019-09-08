@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
     has_many :shared_posts, dependent: :destroy
 
 	attr_accessor :remember_token
+    before_create :confirmation_token
 	before_save { self.email = email.downcase }
     
     validates :name, presence: true, length: { maximum: 50 }
@@ -44,4 +45,27 @@ class User < ActiveRecord::Base
     def self.all_except(user)
       where.not(id: user)
     end
+
+    # def validate_email
+    #     self.email_confirmed = true
+    #     self.confirm_token = nil
+    # end
+
+    def email_activate
+        self.email_confirmed = true
+        self.confirm_token = nil
+        save!(validate: false)
+    end
+
+    def confirmation_token
+        if self.confirm_token.blank?
+            self.confirm_token = SecureRandom.urlsafe_base64.to_s
+        end
+    end
+
+    # def set_confirmation_token
+    #     if self.confirm_token.blank?
+    #         self.confirm_token = SecureRandom.urlsafe_base64.to_s
+    #     end
+    # end
 end

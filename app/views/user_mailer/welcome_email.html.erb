@@ -6,10 +6,11 @@
 <body>
 	<h1>Welcome to Blogit, <%= @user.name %></h1>
 	<p>
-		You have successfully signed up for Blogit. To login to the site, follow this link: <%= @url %>
-	</p>
-	<p>
-		Thanks for joining Blogit. Be rest assured of a wonderful time!
+		Thanks for joining Blogit. Be rest assured of a wonderful experience! To confirm your registration, click the URL below:
+
+		<%= confirm_email_user_url(@user.confirm_token) %>
+
+		<%#<%= link_to "Confirm", confirm_email_url(@user.confirm_token, host: 'http://localhost:3000') %>
 	</p>
 </body>
 </html>

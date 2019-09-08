@@ -1,11 +1,10 @@
 class UserMailer < ApplicationMailer
-	default from: 'notifications@blogit.com'
+	default from: 'do_not_reply@blogit.com'
 
 	def welcome_email(user)
-		byebug
 		@user = user
-		@url = login_url
-		mail(to: user.email, subject: 'Welcome to Blogit, the ultimate blogger')
+		# @url = login_url
+		mail(to: @user.email, subject: 'Welcome to Blogit, the ultimate blogger')
 	end
 
 	def comment_added(post)

@@ -2,5 +2,7 @@
 	<ol class="posts">
 		<%= render @feed_items %>
 	</ol>
-	<%#<%= will_paginate @feed_items %>
+	<%= will_paginate @feed_items %>
+<% else %>
+	<p>Your Posts feed is currently empty. To get started, create a post (<i>click on the blue button "Create Post" on the left</i>)</p>
 <% end %>

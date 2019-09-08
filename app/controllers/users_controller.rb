@@ -30,14 +30,20 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    
     if @user.save
-      UserMailer.welcome_email(@user).deliver_later
-      log_in @user
-      flash[:success] = "Welcome to bLogs"
-      redirect_to @user
+      UserMailer.welcome_email(@user).deliver
+      # @user.set_confirmation_token
+      # @user.save(validate: false)
+      # UserMailer.welcome_email(@user).deliver_later
+      flash[:success] = "Please confirm your email address to continue"
+      redirect_to root_url
+      #another
+      # log_in @user
+      # flash[:success] = "Welcome to bLogs"
+      # redirect_to @user
     else
-      render 'new'
+      flash[:error] = "Invalid, please try again"
+      render :new
     end
   end
 
@@ -63,10 +69,25 @@ class UsersController < ApplicationController
     end
   end
 
+  def confirm_email
+    user = User.find_by_confirm_token(params[:token])
+    if user
+      user.email_activate
+      flash[:success] = "Welcome to BLOGiT. Please login to continue"
+      redirect_to login_url
+      # user.validate_email
+      # user.save(validate: false)
+      # redirect_to user
+    else
+      flash[:error] = 'Sorry. User does not exist'
+      redirect_to root_url
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      # byebug
       @user = User.find(params[:id])
       @user.posts = Post.where({ user_id: @user.id, public_post: true }) if current_user!=@user
     end

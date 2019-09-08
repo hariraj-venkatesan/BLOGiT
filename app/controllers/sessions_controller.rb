@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	user = User.find_by(email: params[:session][:email].downcase)
+  	user = User.find_by_email(params[:session][:email].downcase)
   	if user && user.authenticate(params[:session][:password])
-  		log_in user
-  		params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-  		# redirect_back_or user
-      redirect_back_or root_url
+      flash.now[:error] = 'Please confirm your email address by following the instructions in the account confirmation email you received to proceed' if not user.email_confirmed
+      log_in user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      redirect_back_or root_path
   	else
   		flash.now[:danger] = "Invalid credentials"
   		render 'new'
