@@ -28,5 +28,7 @@ module Blog
     # config.action_mailer.default_url_options = { host: 'example.com' }
     config.action_mailer.default_url_options = { host: 'blogit-ultimate.herokuapp.com' }
     # config.action_mailer.preview_path = "#{Rails.root}/lib/mailer_previews"
+
+    config.web_console.white_listed_ips = '10.0.2.2'
   end
 end
