@@ -46,11 +46,6 @@ class User < ActiveRecord::Base
       where.not(id: user)
     end
 
-    # def validate_email
-    #     self.email_confirmed = true
-    #     self.confirm_token = nil
-    # end
-
     def email_activate
         self.email_confirmed = true
         self.confirm_token = nil
@@ -62,12 +57,6 @@ class User < ActiveRecord::Base
             self.confirm_token = SecureRandom.urlsafe_base64.to_s
         end
     end
-
-    # def set_confirmation_token
-    #     if self.confirm_token.blank?
-    #         self.confirm_token = SecureRandom.urlsafe_base64.to_s
-    #     end
-    # end
 
     def name_with_email
         "#{name} ( #{email} )"

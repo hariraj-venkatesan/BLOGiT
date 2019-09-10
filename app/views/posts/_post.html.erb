@@ -6,8 +6,8 @@
 	<span class="content"><%= link_to post.content, post_path(post.id) %></span>
 	<span class="timestamp">
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
-		<%= link_to "Edit", edit_post_path(post.id) %>
 		<% if current_user?(post.user) %>
+			<%= link_to "Edit", edit_post_path(post.id) %>
 			<%= link_to "Delete", post, method: :delete, data: { confirm: "Are you sure?" } %>
 			<%= link_to "Share", new_shared_post_path(post: post) if post.public_post == false %>
 		<% end %>

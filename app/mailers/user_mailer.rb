@@ -3,7 +3,6 @@ class UserMailer < ApplicationMailer
 
 	def welcome_email(user)
 		@user = user
-		# @url = login_url
 		mail(to: @user.email, subject: 'Welcome to Blogit, the ultimate blogger')
 	end
 

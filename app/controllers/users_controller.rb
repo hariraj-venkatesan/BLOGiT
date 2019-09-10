@@ -33,15 +33,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       UserMailer.welcome_email(@user).deliver_later
-      # @user.set_confirmation_token
-      # @user.save(validate: false)
-      # UserMailer.welcome_email(@user).deliver_later
       flash[:success] = "Please confirm your email address to continue"
       redirect_to root_url
-      #another
-      # log_in @user
-      # flash[:success] = "Welcome to bLogs"
-      # redirect_to @user
     else
       flash[:error] = "Invalid, please try again"
       render :new
@@ -71,14 +64,11 @@ class UsersController < ApplicationController
   end
 
   def confirm_email
-    user = User.find_by_confirm_token(params[:token])
+    user = User.find_by_confirm_token(params[:id])
     if user
       user.email_activate
-      flash[:success] = "Welcome to BLOGiT. Please login to continue"
+      flash[:success] = "Welcome to BLOGiT! Please login to continue."
       redirect_to login_url
-      # user.validate_email
-      # user.save(validate: false)
-      # redirect_to user
     else
       flash[:error] = 'Sorry. User does not exist'
       redirect_to root_url
